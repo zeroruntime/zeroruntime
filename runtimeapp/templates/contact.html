@@ -1,0 +1,189 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZER0|Runtime</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/build.css' %}" type="text/css">
+</head>
+
+<body class="bg-zinc-100 dark:bg-zinc-900 transition-colors duration-700 ">
+    <div id="particles-js" class="z-10"></div>
+
+    <div class="relative flex flex-col justify-between items-center min-h-screen overflow-hidden py-24 md:py-24 sm:py-48 lg:py-12 z-20">
+        {% include 'navbar.html' %}
+        <!-- Profile Section -->
+
+        <div class="container mx-auto px-5 py-24 space-y-12">
+            <div class="flex flex-grow flex-col items-center justify-center space-y-4 mb-2">
+
+                <div class="text-4xl sm:text-5xl dark:text-white">Get In Touch</div>
+
+                <div class="flex space-x-4 text-4xl mx-auto">
+                    <a href="tel:+233206974702"
+                        class="dark:text-white group-hover:text-green-600 transition duration-300 hover:scale-125"
+                        data-tippy-content="Phone">
+                        <span class="iconify" data-icon="mingcute:phone-fill"></span>
+                    </a>
+                    <a href="mailto:emmanuelaforo5@gmail.com" target="_blank"
+                        class="dark:text-white group-hover:text-green-600 transition duration-300 hover:scale-125"
+                        data-tippy-content="Mail">
+                        <span class="iconify" data-icon="material-symbols-light:mail"></span>
+                    </a>
+                    <a href="https://github.com/zeroruntime" target="_blank"
+                        class="dark:text-white group-hover:text-green-600 transition duration-300 hover:scale-125"
+                        data-tippy-content="GitHub">
+                        <span class="iconify" data-icon="akar-icons:github-fill"></span>
+                    </a>
+                    <a href="https://discordapp.com/users/788872320193658951" target="_blank"
+                        class="dark:text-white group-hover:text-green-600 transition duration-300 hover:scale-125"
+                        data-tippy-content="Discord">
+                        <span class="iconify" data-icon="ic:baseline-discord"></span>
+                    </a>
+                    <a href="https://x.com/Aforo2Emmanuel" target="_blank"
+                        class="dark:text-white group-hover:text-green-600 transition duration-300 hover:scale-125"
+                        data-tippy-content="X (Twitter)">
+                        <span class="iconify" data-icon="pajamas:twitter"></span>
+                    </a>
+                    <a href="https://instagram.com/ktc.emma" target="_blank"
+                        class="dark:text-white group-hover:text-green-600 transition duration-300 hover:scale-125"
+                        data-tippy-content="Instagram">
+                        <span class="iconify" data-icon="mdi:instagram"></span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/emmanuel-aforo" target="_blank"
+                        class="dark:text-white group-hover:text-green-600 transition duration-300 hover:scale-125"
+                        data-tippy-content="LinkedIn">
+                        <span class="iconify" data-icon="mdi:linkedin"></span>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <form action="{% url 'contact' %}" method="POST">
+                {% csrf_token %}
+                <div class="mx-auto border-t pt-8 md:w-2/3 lg:w-1/2">
+                    <div class="-m-2 flex flex-wrap">
+                        <div class="w-1/2 p-2">
+                            <div class="relative">
+                                <input type="text" id="name" name="name"
+                                    class="peer w-full rounded border border-gray-800 bg-gray-800 bg-opacity-40 py-1 px-2 text-base leading-8 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900"
+                                    placeholder="Name" />
+                                <label for="name"
+                                    class="absolute left-3 -top-6 text-sm leading-7 dark:text-white-500 text-gray-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2  peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-green-500">Name</label>
+                            </div>
+                        </div>
+                        <div class="w-1/2 p-2">
+                            <div class="relative">
+                                <input type="email" id="email" name="email"
+                                    class="peer w-full rounded border border-gray-800 bg-gray-800 bg-opacity-40 py-1 px-2 text-base leading-8 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900"
+                                    placeholder="Email" />
+                                <label for="email"
+                                    class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-green-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-green-500">Email</label>
+                            </div>
+                        </div>
+                        <div class="mt-4 w-full p-2">
+                            <div class="relative">
+                                <textarea id="message" name="message"
+                                    class="peer h-32 w-full resize-none rounded border border-gray-800 bg-gray-800 bg-opacity-40 py-1 px-2 text-base leading-6 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-green-500 focus:bg-gray-900 focus:ring-2 focus:ring-green-900"
+                                    placeholder="Message"></textarea>
+                                <label for="message"
+                                    class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-green-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-green-500">Message</label>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-transparent w-1/4 mt-2 mx-auto p-2 items-center text-center justify-center transition duration-300 hover:bg-green-700 text-gray-600 font-semibold hover:text-white py-2 px-4 border-2 border-gray-800 hover:border-transparent rounded rounded-lg">
+                            <button name="contact_submit" type="submit">Send</button>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+
+
+        <footer class="text-gray-400 text-center py-4 mt-2 justify-bottom">
+            <div class="flex items-center justify-center mb-4">
+                <div class="flex items-center">
+                    <div>
+                        <p class="inline">Nothing is currently playing.</p>
+                    </div>
+                </div>
+            </div>
+            <div> Copyright © 2024 ZER0|Runtime. All Rights Reserved. </div>
+        </footer>
+
+
+        {% if messages %}
+        <div aria-live="assertive"
+            class="pointer-events-none fixed inset-0 flex items-end px-4 py-6 sm:items-start sm:p-6 sm:mb-8 z-40">
+            <div class="flex w-full flex-col items-center space-y-4 sm:items-end mb-8">
+                {% for message in messages %}
+                <div
+                    class="success-notification pointer-events-auto w-full md:w-1/4 md:h-1/4 max-w-sm overflow-hidden rounded-lg bg-white dark:bg-gray-800 shadow-lg ring-1 ring-black ring-opacity-5 transition transform ease-out duration-300 
+                    {% if 'success-message' in message.tags %} translate-y-0 opacity-100 sm:translate-x-0 {% else %} hidden {% endif %}">
+                    <div class="p-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <svg class="h-6 w-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div class="ml-3 w-0 flex-1 pt-0.5">
+                                <p class="text-sm font-medium dark:text-white text-gray-900">{{ message }}</p>
+                            </div>
+                            <div class="ml-4 flex flex-shrink-0">
+                                <button type="button"
+                                    class="inline-flex rounded-md dark:bg-gray-800 bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                    <span class="sr-only">Close</span>
+                                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path
+                                            d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+
+
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const notifications = document.querySelectorAll(".success-notification");
+
+            notifications.forEach((notification) => {
+                setTimeout(() => {
+                    notification.classList.add("opacity-0", "translate-y-2");
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 300);
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+
+</html>

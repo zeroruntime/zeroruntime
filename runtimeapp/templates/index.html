@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZER0|Runtime</title>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+
+  <script src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/build.css' %}" type="text/css">
+</head>
+
+<body class="bg-zinc-100 dark:bg-zinc-900 transition-colors duration-700 ">
+  <div id="particles-js" class="z-10"></div>
+  <div class="relative flex flex-col justify-between items-center min-h-screen overflow-hidden z-20">
+    {% include 'navbar.html' %}
+    <div class="flex flex-grow flex-col items-center justify-center space-y-4 mt-8 mb-2">
+      <div class="w-40 h-40 bg-green-500 rounded-full flex items-center justify-center">
+        <span class="text-5xl font-bold text-gray-900">Z</span>
+      </div>
+      <div class="text-4xl sm:text-5xl dark:text-white mt-4">Hello, I'm</div>
+      <div class="text-5xl sm:text-7xl font-bold mb-4">
+        <span id="dynamic" style="transition: opacity 0.5s ease-in-out;" class="bg-clip-text text-transparent bg-gradient-to-r from-green-800 to-green-400">Emmanuel Aforo</span>
+      </div>
+      <div class="flex space-x-4 text-4xl">
+        <a href="https://github.com/zeroruntime" target="_blank"
+          class="dark:text-white group-hover:text-green-600 transition duration-300 hover:scale-125"
+          data-tippy-content="GitHub">
+          <span class="iconify" data-icon="akar-icons:github-fill"></span>
+        </a>
+        <a href="https://discordapp.com/users/788872320193658951" target="_blank"
+          class="dark:text-white group-hover:text-green-600 transition duration-300 hover:scale-125"
+          data-tippy-content="Discord">
+          <span class="iconify" data-icon="ic:baseline-discord"></span>
+        </a>
+        <a href="https://x.com/Aforo2Emmanuel" target="_blank"
+          class="dark:text-white group-hover:text-green-600 transition duration-300 hover:scale-125"
+          data-tippy-content="X (Twitter)">
+          <span class="iconify" data-icon="pajamas:twitter"></span>
+        </a>
+        <a href="https://instagram.com/ktc.emma" target="_blank"
+          class="dark:text-white group-hover:text-green-600 transition duration-300 hover:scale-125"
+          data-tippy-content="Instagram">
+          <span class="iconify" data-icon="mdi:instagram"></span>
+        </a>
+        <a href="https://www.linkedin.com/in/emmanuel-aforo" target="_blank"
+          class="dark:text-white group-hover:text-green-600 transition duration-300 hover:scale-125"
+          data-tippy-content="LinkedIn">
+          <span class="iconify" data-icon="mdi:linkedin"></span>
+        </a>
+      </div>
+    </div>
+
+    <footer class="text-gray-400 text-center py-4 mt-2 justify-bottom">
+      <div class="flex items-center justify-center mb-4">
+        <div class="flex items-center">
+          <div>
+            <p class="inline">Nothing is currently playing.</p>
+          </div>
+        </div>
+      </div>
+      <div> Copyright © 2024 ZER0|Runtime. All Rights Reserved. </div>
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+
+  <script src="{% static 'js/main.js' %}"></script>
+
+
+</body>
+
+</html>
