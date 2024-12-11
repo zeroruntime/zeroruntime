@@ -48,12 +48,13 @@
         <!-- Profile Section -->
 
         <div class="flex flex-grow flex-col items-center justify-center py-12 px-6 mb-8">
-            <h1 class="text-3xl sm:text-5xl dark:text-white mb-8 mt-2 font-bold" style="transition: opacity 0.5s ease-in-out;">About <span id="dynamic" style="transition: opacity 0.5s ease-in-out;" class="text-green-500">Emmanuel Aforo</span> </h1>
+            <h1 class="text-3xl sm:text-5xl dark:text-white mb-8 mt-8 font-bold" style="transition: opacity 0.5s ease-in-out;">About <span id="dynamic" style="transition: opacity 0.5s ease-in-out;" class="text-green-500">Emmanuel Aforo</span> </h1>
             <div class="text-center max-w-2xl mx-auto space-y-12">
                 <div class="flex flex-col items-center">
-                    <div class="w-40 h-40 bg-green-500 rounded-full flex items-center justify-center mb-4">
+                    {% comment %} <div class="w-40 h-40 bg-green-500 rounded-full flex items-center justify-center mb-4">
                         <span class="text-5xl font-bold text-gray-900">Z</span>
-                    </div>
+                    </div> {% endcomment %}
+                    <img src="{% static 'img/zero.gif' %}" alt="Profile Picture" class="rounded-full mt-8 mb-8">
                     <h2 class="text-xl font-semibold text-gray-600 dark:text-gray-300">Don't count the days; make the
                         days count."</h2>
                 </div>
