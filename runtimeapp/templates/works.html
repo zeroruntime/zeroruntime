@@ -5,8 +5,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZER0|Runtime</title>
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <title>Works • ZER0|Runtime</title>
+
+  <!-- Meta Tags -->
+  <meta name="author" content="Emmanuel Aforo">
+  <meta name="description" content="Welcome to ZER0|Runtime's Dimension">
+  <meta name="keywords"
+    content="Portfolio, Web Developer, Graphic Designer, Full-Stack Developer, Projects, Skills, Contact">
+
+  <meta property="og:title" content="Emmanuel Aforo Portfolio">
+  <meta property="og:description"
+    content="Explore my portfolio to see my latest web development projects. Let's build something amazing together!">
+  <meta property="og:image" content="{% static 'img/zero.gif' %}">
+  <meta property="og:url" content="https://zeroruntime.vercel.app">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Emmanuel Aforo - Portfolio">
+  <meta name="twitter:description" content="Check out my portfolio for web development and more!">
+  <meta name="twitter:image" content="{% static 'img/zero.gif' %}">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+  <link rel="manifest" href="{% static 'favicons/site.webmanifest' %}">
+
+
   <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
@@ -59,13 +84,30 @@
       </div>
     </a>
 
+    <a href="#" 
+    class="bg-white dark:bg-zinc-800 border-2 border-green-600 rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row w-[900px] h-[250px] mx-auto transform transition-all duration-300 hover:scale-105 mb-8 relative"
+    target="_blank" rel="noopener noreferrer"><!---->
+    <div class="p-8 flex-shrink-0 flex flex-col justify-between w-full md:w-7/12">
+      <div class="flex items-center mb-4"><img src="{% static 'img/cedisense.png' %}" class="w-16 h-16 mr-2" alt=""><span class="text-3xl font-bold dark:text-white">CediSense (Work In Progress) </span></div>
+      <p class="text-lg text-gray-700 dark:text-gray-300">CediSense is a simple yet powerful tool designed to help you manage your finances effectively. 
+      </p>
+    </div>
+    {% comment %} <div class="relative md:w-5/12 h-full"><img
+        src="{% static 'img/uvaero.png' %}" alt="Project Image"
+        class="object-cover w-full h-full transition duration-300 ease-in-out">
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-white dark:from-zinc-800 to-transparent"></div>
+    </div> {% endcomment %}
+  </a>
+
+
     </div>
 
     <footer class="text-gray-400 text-center py-4 mt-2 justify-bottom">
       <div class="flex items-center justify-center mb-4">
         <div class="flex items-center">
           <div>
-            <p class="inline">Nothing is currently playing.</p>
+            <p class="inline">I'm A Controversy</p>
           </div>
         </div>
       </div>

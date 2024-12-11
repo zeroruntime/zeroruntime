@@ -5,10 +5,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZER0|Runtime</title>
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <title>Home • ZER0|Runtime</title>
 
+  <!-- Meta Tags -->
+  <meta name="author" content="Emmanuel Aforo">
+  <meta name="description" content="Welcome to ZER0|Runtime's Dimension">
+  <meta name="keywords"
+    content="Portfolio, Web Developer, Graphic Designer, Full-Stack Developer, Projects, Skills, Contact">
+
+  <meta property="og:title" content="Emmanuel Aforo Portfolio">
+  <meta property="og:description"
+    content="Explore my portfolio to see my latest web development projects. Let's build something amazing together!">
+  <meta property="og:image" content="{% static 'img/zero.gif' %}">
+  <meta property="og:url" content="https://zeroruntime.vercel.app">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Emmanuel Aforo - Portfolio">
+  <meta name="twitter:description" content="Check out my portfolio for web development and more!">
+  <meta name="twitter:image" content="{% static 'img/zero.gif' %}">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" class="rounded-full" href="{% static 'favicons/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" class="rounded-full" href="{% static 'favicons/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" class="rounded-full" href="{% static 'favicons/favicon-16x16.png' %}">
+  <link rel="manifest" href="{% static 'favicons/site.webmanifest' %}">
+
+
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -19,13 +43,15 @@
   <div id="particles-js" class="z-10"></div>
   <div class="relative flex flex-col justify-between items-center min-h-screen overflow-hidden z-20">
     {% include 'navbar.html' %}
-    <div class="flex flex-grow flex-col items-center justify-center space-y-4 mt-8 mb-2">
-      <div class="w-40 h-40 bg-green-500 rounded-full flex items-center justify-center">
+    <div class="flex flex-grow flex-col items-center justify-center ">
+      {% comment %} <div class="w-40 h-40 bg-green-500 rounded-full flex items-center justify-center">
         <span class="text-5xl font-bold text-gray-900">Z</span>
-      </div>
+      </div> {% endcomment %}
+      <img src="{% static 'img/zero.gif' %}" alt="Profile Picture" class="rounded-full mt-8">
       <div class="text-4xl sm:text-5xl dark:text-white mt-4">Hello, I'm</div>
       <div class="text-5xl sm:text-7xl font-bold mb-4">
-        <span id="dynamic" style="transition: opacity 0.5s ease-in-out;" class="bg-clip-text text-transparent bg-gradient-to-r from-green-800 to-green-400">Emmanuel Aforo</span>
+        <span id="dynamic" style="transition: opacity 0.5s ease-in-out;"
+          class="bg-clip-text text-transparent bg-gradient-to-r from-green-800 to-green-400">Emmanuel Aforo</span>
       </div>
       <div class="flex space-x-4 text-4xl">
         <a href="https://github.com/zeroruntime" target="_blank"
@@ -56,11 +82,11 @@
       </div>
     </div>
 
-    <footer class="text-gray-400 text-center py-4 mt-2 justify-bottom">
-      <div class="flex items-center justify-center mb-4">
+    <footer class="text-gray-400 text-center py-4 justify-bottom">
+      <div class="flex items-center justify-center mb-2">
         <div class="flex items-center">
           <div>
-            <p class="inline">Nothing is currently playing.</p>
+            <p class="inline">It Has Always Been My Dimension</p>
           </div>
         </div>
       </div>
